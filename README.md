@@ -2,22 +2,6 @@
 
 This project is a web application that allows users to convert text to speech using Amazon Polly. The application is built with [Next.js](https://nextjs.org) for the frontend and [FastAPI](https://fastapi.tiangolo.com) for the backend. The frontend is bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app), and the backend uses Amazon Polly to synthesize speech from text.
 
-## Getting Started
-
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
 ## Setting Up Development Environment
 
 ### Prerequisites
