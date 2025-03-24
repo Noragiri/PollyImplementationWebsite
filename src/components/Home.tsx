@@ -1,9 +1,9 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { Container, TextField, Button, Select, MenuItem, InputLabel, FormControl, Typography, Box, CircularProgress, SelectChangeEvent } from '@mui/material';
-import { RootState } from '../store';
-import { setText, setTaskId, setStatus, setMp3Url, setSelectedLanguage, setSelectedVoice } from '../textSlice';
-import voices from './voices';
+import { RootState } from '@/app/store';
+import { setText, setTaskId, setStatus, setMp3Url, setSelectedLanguage, setSelectedVoice } from '@/app/textSlice';
+import voices from '@/data/voices';
 
 export default function Home() {
   const dispatch = useDispatch();
