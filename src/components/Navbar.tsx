@@ -1,10 +1,31 @@
 import React from 'react';
+import { AppBar, Toolbar, Typography, Button, Box } from '@mui/material';
 
-const Navbar: React.FC = () => {
+interface NavbarProps {
+  isAuthenticated: boolean;
+  onLogout: () => void;
+  username?: string | null;
+}
+
+const Navbar: React.FC<NavbarProps> = ({ isAuthenticated, onLogout, username }) => {
   return (
-    <nav style={{ padding: '1rem', backgroundColor: '#333', color: '#fff' }}>
-      <h1>My Website</h1>
-    </nav>
+    <AppBar position="static">
+      <Toolbar>
+        <Typography variant="h6" style={{ flexGrow: 1 }}>
+          Polly Implementation
+        </Typography>
+        {isAuthenticated && (
+          <Box display="flex" alignItems="center">
+            <Typography variant="body1" style={{ marginRight: '1rem' }}>
+              {username || 'User'}
+            </Typography>
+            <Button color="inherit" onClick={onLogout}>
+              Logout
+            </Button>
+          </Box>
+        )}
+      </Toolbar>
+    </AppBar>
   );
 };
 
